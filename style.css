@@ -1,0 +1,184 @@
+/* ===============================
+   GLOBAL
+   =============================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fdf6ec;
+}
+
+/* Disable scrolling when deck is active */
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===============================
+   LOADING SCREEN
+   =============================== */
+
+#loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.loading-top {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.loading-img {
+    width: 120px;
+    animation: pulse 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.loading-bottom {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-top: 20px;
+    max-width: 80%;
+}
+
+/* ===============================
+   INSTRUCTION POPUP
+   =============================== */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 320px;
+}
+
+.start-btn img {
+    width: 30vw;
+    max-width: 100px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* ===============================
+   DECK WRAPPER (Deck + Buttons)
+   =============================== */
+
+#deck-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+}
+
+
+/* ===============================
+   CARD AREA
+   =============================== */
+
+#card-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: calc(100vh - 180px); /* adjust if buttons are taller */
+    margin: 0 auto;
+}
+
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: grab;
+}
+
+/* ===============================
+   ACTION BUTTONS
+   =============================== */
+
+#card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px auto 0;
+    width: 100%;
+}
+
+
+/* Add more space between action buttons */
+#card-actions {
+    gap: 50px; /* increased spacing */
+    margin-bottom: 40px; /* optional extra spacing from bottom */
+}
+
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.action-icon:hover {
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+/* ===============================
+   SUMMARY
+   =============================== */
+
+#summary {
+    text-align: center;
+    padding: 10px;
+}
+
+#liked-cats img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+

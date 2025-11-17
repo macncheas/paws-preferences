@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paws & Preferences</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- INSTRUCTION POPUP -->
+<div id="instruction-popup" class="popup hidden">
+    <div class="popup-content">
+        <h2>Welcome to Paws & Preferences!</h2>
+        <p>Swipe right if you like the cat, swipe left if not.<br>Ready to begin?</p>
+
+        <!-- Start button (image only) -->
+        <div id="start-btn" class="start-btn">
+            <img src="assets/paw-pop-up.png" alt="Start Button">
+        </div>
+    </div>
+</div>
+
+<!-- LOADING SCREEN -->
+<div id="loading">
+    <h2 class="loading-top">PAWS!</h2>
+    <img src="assets/paw-loading.png" class="loading-img" alt="Loading Paw" />
+    <p class="loading-bottom">
+        Grab some catnip and get cosy on a notebook while we load your deck of furfriends...
+    </p>
+</div>
+
+<!-- CARD DECK -->
+<div id="deck-wrapper">
+    <div id="card-container"></div>
+    <div id="card-actions" class="hidden">
+        <img src="assets/no.png" id="dislike-btn" class="action-icon" alt="No">
+        <img src="assets/heart.png" id="like-btn" class="action-icon" alt="Yes">
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div id="summary" class="hidden">
+    <h2>You've got <span id="like-count"></span> Pawed Preferences!</h2>
+    <div id="liked-cats"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
